@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> nano, as it is built into my computer and is the default browser and I hope to be doing most of my coding in the graphical editor when possible. Also, I had a bad experience squashing git commits with vim before.
 
 --
 
@@ -68,6 +68,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Sublime Text 2, I've used it before. It has a lot of cross-language support, auto-highlights curtain syntactical features, shows whitespacing errors in python, and there are several custom packages available for it. It has some built in command line tools including the ability to directly open files in the editor from the command line. I haven't done much customization of it yet.
 
  

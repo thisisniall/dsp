@@ -48,13 +48,17 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python 2.7.12 :: Anaconda 4.1.1 (x86_64); per python -V. This was the default installation on a new mac + anaconda install, and since the course is written for 2.7, I see no real need to change it from that.
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 
+
+```bash
+python -V
+```
 
  
 

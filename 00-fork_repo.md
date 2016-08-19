@@ -55,6 +55,6 @@ Here's your first chance to practice this:
 
 What is your favorite [emoji](http://www.emoji-cheat-sheet.com/)?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I'm not really a fan of emoji. For now lets go with our friend and saviour Cthulu :octopus:.
 
 
