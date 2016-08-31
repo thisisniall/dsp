@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Lists and Tuples are similar in their core structure; at the risk of using a word in its definition they are both data structures of ordered lists of items with an index. Their primary difference is that Lists are mutable (they can be changed) while Tuples are not. For example, we cannot append, slice, pop, or otherwise change a tuple. However, this very immutabilty allows us to use tuples as dictionary keys; you can only use immutable objects (such as tuples and strings) as dictionary keys in python.
 
 ---
 
@@ -20,7 +20,20 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Sets are similar to lists, but cannot contain duplicate entries.
+
+```bash
+lst = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+# if we change the data type to a set
+# all duplicate entries will be removed
+set(lst)
+# output should be {1,2,3,4,5}
+# another example of removing duplication, this time in letters, here:
+set('abracadabra')
+# output should be {'a', 'b', 'c', 'd', 'r'}
+```
+
+ > Sets are typically faster for seeing if an entry is present, but Lists are faster if you wish to iterate over the elements. This is because sets use hashtable lookup to check for presence, while Lists use search-based iteration.
 
 ---
 
@@ -36,7 +49,11 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> List Comphrensions are a way of creating lists with some built-in logic. For example, building a list purely out of even numbers. Here's an example of one (taken from a codeacademy excercise) that takes the numbers 1-10, then compiles a list of numbers whose cubes are divisible by 4:
+```bash
+cubes_by_four = [x**3 for x in range(1,11) if x**3 % 4 == 0]
+```
+
 
 ---
 
@@ -51,7 +68,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937
 
 b.  
 ```
@@ -59,7 +76,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513
 
 c.  
 ```
@@ -67,7 +84,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 

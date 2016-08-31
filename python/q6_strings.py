@@ -3,6 +3,11 @@
 
 
 def donuts(count):
+    if count < 10:
+        return ("Number of donuts: %(count)s." % locals())
+    elif count >= 10:
+         return "Number of donuts: many"
+
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
@@ -20,8 +25,21 @@ def donuts(count):
     """
     raise NotImplementedError
 
+# testing
+# print donuts(4)
+# print donuts(9)
+# print donuts(10)
+# print donuts(99)
+
+    # works
 
 def both_ends(s):
+    if len(s) < 2:
+        return ''
+    else:
+        # blegh, review string slicing
+        return s[:2],s[:2:-1]    
+
     """
     Given a string s, return a string made of the first 2 and the last
     2 chars of the original string, so 'spring' yields 'spng'.
@@ -38,6 +56,12 @@ def both_ends(s):
     'xyyz'
     """
     raise NotImplementedError
+#testing
+print both_ends('spring')
+print both_ends('Hello')
+print both_ends('a')
+print both_ends('xyz')
+
 
 
 def fix_start(s):
