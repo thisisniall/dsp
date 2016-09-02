@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
-> Sets are similar to lists, but cannot contain duplicate entries.
+>> Sets are similar to lists, but cannot contain duplicate entries.
 
 ```bash
 lst = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
@@ -33,7 +33,7 @@ set('abracadabra')
 # output should be {'a', 'b', 'c', 'd', 'r'}
 ```
 
- > Sets are typically faster for seeing if an entry is present, but Lists are faster if you wish to iterate over the elements. This is because sets use hashtable lookup to check for presence, while Lists use search-based iteration.
+ >> Sets are typically faster for seeing if an entry is present, but Lists are faster if you wish to iterate over the elements. This is because sets use hashtable lookup to check for presence, while Lists use search-based iteration.
 
 ---
 
@@ -41,7 +41,33 @@ set('abracadabra')
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python's `lamba` is a method of using anonymous functions. Anonymous functions are simply functions that don't have names, but execute a task regardless. They are typically used for fairly simple operations that don't need to be constantly re-used throughout a larger piece of code. For example:
+
+```bash
+lambda x: x % 2 == 0
+
+# is the same thing as
+
+def is_even(x):
+	return x%2 == 0
+```
+
+>> An anonymous function generated `lambda` can also be used with `filter` or `map` the same way normal functions are, or as a key in 'sorted'.
+
+```bash
+# example with filter:
+
+my_list = range(20)
+filter(lambda x: x % 2 == 0, my_list)
+# is the same as
+filter(is_even, my_list)
+
+
+# example with sorted:
+new_list = [[1,2,3], [2,1,4], [3,3]]
+# sorts by the size of the item at position 1 in the array
+print sorted(new_list, key=lambda x: x[1]) 
+```
 
 ---
 
@@ -49,11 +75,33 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
-> List Comphrensions are a way of creating lists with some built-in logic. For example, building a list purely out of even numbers. Here's an example of one (taken from a codeacademy excercise) that takes the numbers 1-10, then compiles a list of numbers whose cubes are divisible by 4:
+>> List Comphrensions are a way of creating lists with some built-in logic. For example, building a list purely out of even numbers. Here's an example of one (taken from a codeacademy excercise) that takes the numbers 1-10, then compiles a list of numbers whose cubes are divisible by 4:
 ```bash
 cubes_by_four = [x**3 for x in range(1,11) if x**3 % 4 == 0]
 ```
 
+>> We can use map and filter to get a similar effect, and it may be slightly faster in some cases, but list comprehensions are generally seen as more idiomatic in python. Here's the same effect using map and filter.
+
+
+```bash
+items = [1,2,3,4,5,6,7,8,9,10]
+def cube(x):
+		return x**3
+
+def divisible_by_four(x):
+	if x % 4 == 0:
+		return True
+	else:
+		return False
+
+# here we use map to apply the cube to all elements of the list
+new_items = list(map(cube, items))
+# here we use filter to filter out the elements not divisible by 4
+new_items = filter(divisible_by_four,new_items)
+print new_items
+```
+
+>> Note that both map and filter can still be useful when you don't need a multi-step logic or for simpler list situation.
 
 ---
 
